@@ -83,6 +83,7 @@ $(document).ready(function () {
                     maxlength: 16
                 },
                 "confirm-password": {
+                    required: true,
                     equalTo: "#password"
                 },
                 email: {
@@ -90,6 +91,7 @@ $(document).ready(function () {
                 	email: true
                 },
                 mobile: {
+                    required: true,
                 	isMobile:true
                 }
             },
@@ -107,11 +109,15 @@ $(document).ready(function () {
                     maxlength: "密码最大为16位"
                 },
                 "confirm-password": {
+                    required: "必须填写密码",
                     equalTo: "两次输入的密码不一致"
                 },
                 email: {
                 	 required: "必须填写邮箱",
                 	 email:"邮箱格式不对"
+                },
+                mobile: {
+                    required: "必须填写手机"    
                 }
             },
             submitHandler: function (form) {
