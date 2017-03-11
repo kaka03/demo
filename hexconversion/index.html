@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>进制转换(runoob.com)</title>
+<script src="jquery-1.10.0.js">
+</script>
+<script>
+$(document).ready(function(){
+	$("button").click(function(){
+	var m = $("input").val();
+
+		var r1 = trans(m);
+		alert(r1);
+	});
+
+	 function trans(m){
+	 	var x=m;
+	 	var y=36;
+	 	var r=0;
+	 	var result =""; 
+	 	var myarr =[];
+	 	var B = [0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+	 	var resuilt =null;
+
+	 	for(var i =0; x>0; i++) {
+	 		r=x%y;
+	 		x=parseInt(x/y);
+	 		myarr.push(r);
+	 	}
+	 	for (var j =myarr.length-1;j>=0; j--) {
+	 		result = result+B[myarr[j]];
+	 	}	
+		return result;
+	}
+});
+</script>
+</head>
+<body>
+<input type="number" name="number">
+<button>十进制转36进制</button>
+</body>
+</html>
